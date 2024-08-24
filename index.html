@@ -3,29 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PiWatch</title>
-    <script type='text/javascript'>
-  window.smartlook||(function(d) {
-    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
-    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
-    c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
-    })(document);
-    smartlook('init', '4c32fa23f71866fd7dd69d5eee4651c28b3e770d', { region: 'eu' });
-</script>
+    <title>Drei Blöcke mit PNG-Bildern, Download-Block und Footer</title>
     <style>
         body {
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
         }
 
-        .image-container {
-            display: flex;
-            justify-content: center;
+        .block {
+            margin: 20px 0;
         }
 
-        .image-container img {
+        .block img {
             width: 1366px;
             height: 768px;
             object-fit: cover;
@@ -37,7 +31,7 @@
             padding: 20px;
             background-color: #e0e0e0;
             border: 2px solid #ccc;
-            margin: 20px auto;
+            margin-bottom: 20px;
         }
 
         .download-block a {
@@ -66,21 +60,23 @@
     </style>
 </head>
 <body>
-
-    <div class="image-container">
+    <div class="block">
         <img src="1.png" alt="Bild 1">
+    </div>
+    <div class="block">
         <img src="2.png" alt="Bild 2">
+    </div>
+    <div class="block">
         <img src="3.png" alt="Bild 3">
     </div>
 
     <div class="download-block">
         <p>Klicke hier, um die Datei herunterzuladen:</p>
-        <a href="install.sh" download>Download install.sh</a>
+        <a href="install.sh" download>Download Datei</a>
     </div>
 
     <footer>
         &copy; 2024 Dein Name. Alle Rechte vorbehalten.
     </footer>
-
 </body>
 </html>
