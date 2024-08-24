@@ -1,107 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PiWatch</title>
+    <title>Drei PNG-Bilder, Download-Block und Footer</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .image-container {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
         }
-        .container {
+
+        .image-container img {
+            width: 1366px;
+            height: 768px;
+            object-fit: cover;
+        }
+
+        .download-block {
+            width: 1366px;
             text-align: center;
-            background: #fff;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            width: 100%;
+            background-color: #e0e0e0;
+            border: 2px solid #ccc;
+            margin: 20px auto;
         }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        .download-button {
-            display: inline-block;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
+
+        .download-block a {
             text-decoration: none;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        .download-button:hover {
-            background-color: #0056b3;
-        }
-        .section {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-        }
-        .faq {
-            text-align: left;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .faq dt {
+            color: #333;
             font-weight: bold;
-            margin-top: 10px;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        .faq dd {
-            margin: 0 0 10px 0;
+
+        .download-block a:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to PiWatch</h1>
-        <p>PiWatch is a powerful monitoring tool designed to display system information on your Raspberry Pi. It offers a customizable and visually appealing interface similar to Conky, allowing you to keep track of vital system statistics right on your desktop.</p>
-        
-        <div class="section">
-            <h2>Installation Instructions</h2>
-            <p>To get started with PiWatch, follow these steps:</p>
-            <ol>
-                <li>Download the installation script using the link below.</li>
-                <li>Open a terminal on your Raspberry Pi.</li>
-                <li>Navigate to the directory where the <code>install.sh</code> script was downloaded.</li>
-                <li>Make the script executable by running: <code>chmod +x install.sh</code></li>
-                <li>Execute the script with: <code>sudo ./install.sh</code></li>
-                <li>Follow the on-screen instructions to complete the installation.</li>
-            </ol>
-            <a href="install.sh" class="download-button" download>Download Installation Script</a>
-        </div>
-        
-        <div class="section faq">
-            <h2>Frequently Asked Questions (FAQ)</h2>
-            <dl>
-                <dt>What is PiWatch?</dt>
-                <dd>PiWatch is a system monitoring tool for Raspberry Pi that provides real-time information about your system's performance, similar to Conky.</dd>
-                
-                <dt>Do I need to install any dependencies?</dt>
-                <dd>PiWatch requires a few standard packages that will be installed automatically by the script. Ensure that your Raspberry Pi is up-to-date before running the installation.</dd>
-                
-                <dt>Can I customize PiWatch?</dt>
-                <dd>Yes, PiWatch is highly customizable. After installation, you can modify its configuration files to suit your preferences and display the information you care about most.</dd>
-                
-                <dt>Where can I find more help?</dt>
-                <dd>If you encounter any issues or need further assistance, please visit our <a href="https://dasweltall.github.io/pi-watch/">support page</a> or contact us directly.</dd>
-            </dl>
-        </div>
+
+    <div class="image-container">
+        <img src="1.png" alt="Bild 1">
+        <img src="2.png" alt="Bild 2">
+        <img src="3.png" alt="Bild 3">
     </div>
+
+    <div class="download-block">
+        <p>Klicke hier, um die Datei herunterzuladen:</p>
+        <a href="install.sh" download>Download install.sh</a>
+    </div>
+
+    <footer>
+        &copy; 2024 Dein Name. Alle Rechte vorbehalten.
+    </footer>
+
 </body>
 </html>
