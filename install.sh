@@ -41,14 +41,14 @@ pip3 install -r requirements.txt
 
 # 5. Copy script to Desktop
 echo "Creating Desktop shortcut..."
-cp piwatch.py ~/Desktop/PiWatch
+cp piwatch.py ~/pi-watch/PiWatch.py
 
 # 6. Create Desktop shortcut
 cat << EOF > ~/Desktop/PiWatch.desktop
 [Desktop Entry]
 Name=PiWatch
 Comment=Monitor CPU and Network Status
-Exec=python3 ~/Desktop/PiWatch.py
+Exec=python3 ~/pi-watch/PiWatch.py
 Icon=$(pwd)/icon.png
 Terminal=false
 Type=Application
@@ -58,4 +58,4 @@ chmod +x ~/Desktop/PiWatch.desktop
 
 
 echo "Starting the program..."
-python3 ~/Desktop/PiWatch
+python3 ~/pi-watch/PiWatch.py
