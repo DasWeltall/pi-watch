@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="icon.png">
     <title>PiWatch</title>
+     <script>
+        // Verhindert das Öffnen des Kontextmenüs bei einem Rechtsklick
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
     <style>
         body {
             margin: 0;
