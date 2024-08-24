@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if ! command -v git &> /dev/null
+then
+    echo "Git not found. Installing..."
+    sudo apt update
+    sudo apt install git
+fi
+
 # 1. Clone GitHub repository
 echo "Cloning repository from GitHub..."
 git clone https://github.com/DasWeltall/pi-watch.git
@@ -34,7 +41,7 @@ pip3 install -r requirements.txt
 
 # 5. Copy script to Desktop
 echo "Creating Desktop shortcut..."
-cp piwatch.py ~/Desktop/PiWatch.py
+cp piwatch.py ~/Desktop/PiWatch
 
 # 6. Create Desktop shortcut
 cat << EOF > ~/Desktop/PiWatch.desktop
@@ -51,4 +58,4 @@ chmod +x ~/Desktop/PiWatch.desktop
 
 
 echo "Starting the program..."
-python3 ~/Desktop/PiWatch.py
+python3 ~/Desktop/PiWatch
