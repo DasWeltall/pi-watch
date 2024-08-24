@@ -28,7 +28,6 @@ then
 fi
 
 # 3. Check and install Tkinter if needed
-echo "Checking for Tkinter..."
 if ! python3 -c "import tkinter" &> /dev/null
 then
     echo "Tkinter not found. Installing..."
@@ -39,8 +38,11 @@ fi
 echo "Installing required Python packages..."
 pip3 install -r requirements.txt
 
+echo "All packages installed!"
+
 # 5. Copy script to Desktop
 echo "Creating Desktop shortcut..."
+mkdir pi-watch
 cp piwatch.py ~/pi-watch/PiWatch.py
 
 # 6. Create Desktop shortcut
